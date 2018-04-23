@@ -32,7 +32,7 @@
                 <value>net.proselyte.bookmanager.model.Book</value>
                 <value>net.proselyte.bookmanager.model.Author</value>
                 <value>net.proselyte.bookmanager.model.Genre</value>
-                <value>net.proselyte.bookmanager.model.ViewAllBook</value>
+                <!--<value>net.proselyte.bookmanager.model.ViewAllBook</value>-->
             </list>
         </property>
         <property name="hibernateProperties">
