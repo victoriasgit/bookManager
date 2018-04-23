@@ -1,7 +1,7 @@
 package net.proselyte.bookmanager.dao;
 
 import net.proselyte.bookmanager.model.Book;
-import net.proselyte.bookmanager.model.ViewAllBook;
+//import net.proselyte.bookmanager.model.ViewAllBook;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -56,7 +56,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     @SuppressWarnings("unchecked")
-    /*public List<Book> listBooks() {
+    public List<Book> listBooks() {
         Session session = this.sessionFactory.getCurrentSession();
         List<Book> bookList = session.createQuery("from Book").list();
 
@@ -65,13 +65,13 @@ public class BookDaoImpl implements BookDao {
         }
 
         return bookList;
-    }*/
-    public List<ViewAllBook> listBooks() {
-        Session session = this.sessionFactory.getCurrentSession();
-        return session.createSQLQuery("SELECT * FROM view_allbooks").addEntity(ViewAllBook.class).list();
-        //List<BookView> bvs = em.createQuery("SELECT v FROM BookView v", BookView.class).getResultList();
-        //List<ViewAllBook> bookList = session.createQuery("FROM BookAllView").list();
-
-        //return bookList;
     }
+//    public List<ViewAllBook> listBooks() {
+//        Session session = this.sessionFactory.getCurrentSession();
+//        return session.createSQLQuery("SELECT * FROM view_allbooks").addEntity(ViewAllBook.class).list();
+//        //List<BookView> bvs = em.createQuery("SELECT v FROM BookView v", BookView.class).getResultList();
+//        //List<ViewAllBook> bookList = session.createQuery("FROM BookAllView").list();
+//
+//        //return bookList;
+//    }
 }

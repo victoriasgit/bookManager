@@ -2,7 +2,7 @@ package net.proselyte.bookmanager.service;
 
 import net.proselyte.bookmanager.dao.BookDao;
 import net.proselyte.bookmanager.model.Book;
-import net.proselyte.bookmanager.model.ViewAllBook;
+//import net.proselyte.bookmanager.model.ViewAllBook;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,7 +42,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     @Transactional
-    public List<ViewAllBook> listBooks() {
+    public List<Book> listBooks() {
         return this.bookDao.listBooks();
     }
+
+//    @Override
+//    @Transactional
+//    public List<ViewAllBook> listBooks() {
+//        return this.bookDao.listBooks();
+//    }
 }

@@ -1,7 +1,7 @@
 package net.proselyte.bookmanager.controller;
 
 import net.proselyte.bookmanager.model.Book;
-import net.proselyte.bookmanager.model.ViewAllBook;
+//import net.proselyte.bookmanager.model.ViewAllBook;
 import net.proselyte.bookmanager.service.AuthorService;
 import net.proselyte.bookmanager.service.BookService;
 import net.proselyte.bookmanager.service.GenreService;
@@ -45,10 +45,11 @@ public class BookController {
 
     @RequestMapping(value = "/books", method = RequestMethod.GET)
     public String listBooks(Model model){
-        List<ViewAllBook> list =  this.bookService.listBooks();
-        System.out.println(list.size());
+//        List<Book> list =  this.bookService.listBooks();
+//        System.out.println(list.size());
         model.addAttribute("book", new Book());
-        model.addAttribute("listBooks", list);
+//        model.addAttribute("listBooks", list);
+        model.addAttribute("listBooks", this.bookService.listBooks());
         model.addAttribute("listAuthors", this.authorService.listAuthors());
         model.addAttribute("listGenres", this.genreService.listGenres());
         return "books";

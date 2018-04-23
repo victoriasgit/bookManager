@@ -1,7 +1,7 @@
 package net.proselyte.bookmanager.dao;
 
 import net.proselyte.bookmanager.model.Book;
-import net.proselyte.bookmanager.model.ViewAllBook;
+//import net.proselyte.bookmanager.model.ViewAllBook;
 
 import java.util.List;
 
@@ -14,5 +14,7 @@ public interface BookDao {
 
     public Book getBookById(int bookId);
 
-    public List<ViewAllBook> listBooks();
+    public List<Book> listBooks();
+
+//    public List<ViewAllBook> listBooks();
 }
